@@ -1,15 +1,49 @@
-{% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
+
+
+{% extends "polls/base.html" %}
+
+{% block body_block %}
+    <div class="container border mt-3" >
+        <h1 class="h2">Poll application</h1>
+        <p class="h6">This app allows users to choose choices.</p>
+    </div>
+
+    <div class="py-3"></div>
+
+    <div class="questions container">
+    <p>Select a question you'd like to vote and view results.</p>
+        {% if latest_question_list %}
+            <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available.</p>
+        {% endif %}
+
+    </div>
+
+
+
+
+{% endblock %}
+
+
+{#{% load static %}#}
+{##}
+{#<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">#}
+{##}
+{#{% if latest_question_list %}#}
+{#    <ul>#}
+{#    {% for question in latest_question_list %}#}
 {#        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>#}
 {#        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>#}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{#        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>#}
+{#    {% endfor %}#}
+{#    </ul>#}
+{#{% else %}#}
+{#    <p>No polls are available.</p>#}
+{#{% endif %}#}
