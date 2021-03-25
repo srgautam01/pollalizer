@@ -11,4 +11,4 @@ Pollalizer allows your company to take your customer's opinions in forms of ques
 * MVC architecture, powered by SQLite database
 
 ## Author
-Sundar Gautaum
+Sundar Gautam
