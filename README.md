@@ -2,7 +2,7 @@
 
 Pollalizer allows your company to take your customer's opinions in forms of questions and choices. The questions are easy to enter: simply visit the Django admin panel and you'll feel like at home. Then you can send the questions to your users and take their surveys; and you can utilize this to build your compny's Business Intelligence (BI).
 
-![Pollalizer screenshot](./screenshots/Screenshot%20from%202021-03-25%2013-22-32.png)
+![Pollalizer screenshot](./screenshots/sc1.png)
 
 ## Technical Specifications
 
