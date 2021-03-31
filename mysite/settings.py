@@ -25,7 +25,7 @@ SECRET_KEY = '3%jkivr(q6ovj)*3cs818buk6q&^%6=f086@q4$h$+aw*kivzw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'pollalizer.sundar.website', '138.197.225.210']
 
 
 # Application definition
